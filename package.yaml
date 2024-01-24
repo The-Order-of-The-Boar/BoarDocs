@@ -2,9 +2,9 @@ name:                BoarDocs
 version:             0.1.0.0
 github:              "githubuser/BoarDocs"
 license:             "gpl-2-or-later"
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2024 Author name here"
+author:              "LeonardoCBoar"
+maintainer:          ""
+copyright:           "2024 LeonardoCBoar"
 
 extra-source-files:
 - README.md
@@ -17,7 +17,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/BoarDocs#readme>
+description:         Please see the README on GitHub at https://github.com/The-Order-of-The-Boar/BoarDocs/blob/master/README.md
 
 dependencies:
 - base >= 4.7 && < 5
