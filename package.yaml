@@ -1,7 +1,7 @@
 name:                BoarDocs
 version:             0.1.0.0
 github:              "githubuser/BoarDocs"
-license:             gpl 
+license:             "gpl-2-or-later"
 author:              "Author name here"
 maintainer:          "example@example.com"
 copyright:           "2024 Author name here"
