@@ -1,4 +1,4 @@
-cabal-version: 1.12
+cabal-version: 2.2
 
 -- This file has been generated from package.yaml by hpack version 0.35.2.
 --
@@ -11,7 +11,7 @@ homepage:       https://github.com/githubuser/BoarDocs#readme
 bug-reports:    https://github.com/githubuser/BoarDocs/issues
 author:         LeonardoCBoar
 copyright:      2024 LeonardoCBoar
-license:        GPL-2-or-later
+license:        GPL-2.0-or-later
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
@@ -27,6 +27,8 @@ library
       Lib
   other-modules:
       Paths_BoarDocs
+  autogen-modules:
+      Paths_BoarDocs
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -39,6 +41,8 @@ library
 executable BoarDocs-exe
   main-is: Main.hs
   other-modules:
+      Paths_BoarDocs
+  autogen-modules:
       Paths_BoarDocs
   hs-source-dirs:
       app
@@ -54,6 +58,8 @@ test-suite BoarDocs-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
+      Paths_BoarDocs
+  autogen-modules:
       Paths_BoarDocs
   hs-source-dirs:
       test
