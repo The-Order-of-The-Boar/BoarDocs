@@ -1,7 +1,7 @@
 name:                BoarDocs
 version:             0.1.0.0
 github:              "githubuser/BoarDocs"
-license:             "gpl-2-or-later"
+license:             "GPL-2.0-or-later"
 author:              "LeonardoCBoar"
 maintainer:          ""
 copyright:           "2024 LeonardoCBoar"
@@ -21,6 +21,8 @@ description:         Please see the README on GitHub at https://github.com/The-O
 
 dependencies:
 - base >= 4.7 && < 5
+- text
+- pandoc >= 3.1
 
 ghc-options:
 - -Wall
