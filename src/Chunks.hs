@@ -50,9 +50,12 @@ separateText t = fmap flatten
   where
     toChunk :: Text -> Chunk
     toChunk s
-      | litPrefix `T.isPrefixOf` s = (Lit, T.drop (T.length litPrefix) s)
-      | cfgPrefix `T.isPrefixOf` s = (Cfg, T.drop (T.length cfgPrefix) s)
+      | litPrefix `T.isPrefixOf` cut = (Lit, T.drop (T.length litPrefix) cut)
+      | cfgPrefix `T.isPrefixOf` cut = (Cfg, T.drop (T.length cfgPrefix) cut)
       | otherwise = (Code, s)
+      where
+        -- For Lit and Cfg, leading and trailing spaces shall be removed
+        cut = T.strip s
     flatten :: NonEmpty Chunk -> Chunk
                      -- Gets the type of the first chunk (assuming that all the
                      -- chunks are the same type)
