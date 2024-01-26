@@ -24,7 +24,7 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Chunks
   other-modules:
       Paths_BoarDocs
   autogen-modules:
