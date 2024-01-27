@@ -23,6 +23,7 @@ dependencies:
 - base >= 4.7 && < 5
 - text
 - pandoc >= 3.1
+- pandoc-types >= 1.23
 
 ghc-options:
 - -Wall
