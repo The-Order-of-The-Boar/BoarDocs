@@ -23,6 +23,10 @@ source-repository head
   location: https://github.com/githubuser/BoarDocs
 
 library
+  exposed-modules:
+      BoarConfig
+      FParser
+      PandocUtils
   other-modules:
       Paths_BoarDocs
   autogen-modules:
