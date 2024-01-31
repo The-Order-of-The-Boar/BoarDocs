@@ -1,11 +1,12 @@
 module Main (main) where
 
+import qualified Data.Text as T
 import qualified Data.Text.IO as TIO
 import System.Environment (getArgs)
 import Text.Megaparsec (runParserT, errorBundlePretty)
 import Control.Monad.Trans.State (runState)
 
-import FParser (defaultFState, parseFile)
+import FParser (FState (..), defaultFState, parseFile)
 
 singleArgument :: [String] -> String
 singleArgument [arg] = arg
@@ -23,5 +24,6 @@ main = do
 
   print s
 
+  TIO.putStrLn $ T.unlines $ literature s
 
 
