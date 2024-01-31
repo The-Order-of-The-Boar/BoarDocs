@@ -24,7 +24,9 @@ source-repository head
 
 library
   exposed-modules:
-      Chunks
+      BoarConfig
+      FParser
+      PandocUtils
   other-modules:
       Paths_BoarDocs
   autogen-modules:
@@ -34,9 +36,12 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , containers >=0.6.5
+    , megaparsec >=9.5
     , pandoc >=3.1
     , pandoc-types >=1.23
     , text
+    , transformers >=0.6.1
   default-language: Haskell2010
 
 executable BoarDocs-exe
@@ -51,9 +56,12 @@ executable BoarDocs-exe
   build-depends:
       BoarDocs
     , base >=4.7 && <5
+    , containers >=0.6.5
+    , megaparsec >=9.5
     , pandoc >=3.1
     , pandoc-types >=1.23
     , text
+    , transformers >=0.6.1
   default-language: Haskell2010
 
 test-suite BoarDocs-test
@@ -69,8 +77,11 @@ test-suite BoarDocs-test
   build-depends:
       BoarDocs
     , base >=4.7 && <5
+    , containers >=0.6.5
+    , megaparsec >=9.5
     , pandoc >=3.1
     , pandoc-types >=1.23
     , text
+    , transformers >=0.6.1
     , HUnit >=1.6
   default-language: Haskell2010
