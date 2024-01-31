@@ -26,6 +26,7 @@ dependencies:
 - pandoc-types >= 1.23
 - megaparsec >= 9.5
 - transformers >= 0.6.1
+- containers >= 0.6.5
 
 ghc-options:
 - -Wall

@@ -1,3 +1,6 @@
+{-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE TypeSynonymInstances #-}
+
 module PandocUtils ( TxtReader
                    , getPandocTxtReader
                    ) where
@@ -10,6 +13,9 @@ import Text.Pandoc.Options (ReaderOptions, def)
 import Text.Pandoc.Readers (Reader (TextReader), readers)
 
 type TxtReader = ReaderOptions -> Text -> PandocIO Pandoc
+
+instance Show TxtReader where
+  show _ = "PandocTextReader"
 
 -- Gets the reader associated with a name (Ex: "markdown")
 getPandocTxtReader :: Text -> Maybe TxtReader
